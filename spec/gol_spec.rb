@@ -30,5 +30,18 @@ describe GameOfLife do
         expect(game.board).to eq [['.']]
       end
     end
+    context 'alive cells' do
+      xit 'keeps a stable neighborhood alive' do
+        game = GameOfLife.new [
+          ['*','*'],
+          ['*','*']
+        ]
+        game.next
+        expect(game.board).to eq [
+          ['*','*'],
+          ['*','*']
+        ]
+      end
+    end
   end
 end

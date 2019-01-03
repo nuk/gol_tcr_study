@@ -7,6 +7,7 @@ class GameOfLife
   end
 
   def next
-    @board = @rows.times.map { |row| @cols.times.map { |col| '.' } }
+    new_board = @rows.times.map { |row| @cols.times.map { |col| '.' } }
+    @board = new_board
   end
 end

@@ -25,9 +25,9 @@ describe GameOfLife do
       end
 
       it 'kills a pair of cells as well' do
-        game = GameOfLife.new [['*']]
+        game = GameOfLife.new [['*', '*']]
         game.next
-        expect(game.board).to eq [['.']]
+        expect(game.board).to eq [['.', '.']]
       end
     end
     context 'alive cells' do

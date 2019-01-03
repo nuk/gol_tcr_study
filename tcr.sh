@@ -1,5 +1,5 @@
 TEST="rspec"
 COMMIT="git add . && git commit -am 'TCR STEP'"
-REVERT="git revert"
+REVERT="git reset --hard HEAD~1"
 
-(eval $TEST) && (eval $COMMIT) || (eval $REVERT)
+(eval $COMMIT) && (eval $TEST) || (eval $REVERT)

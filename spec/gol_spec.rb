@@ -22,4 +22,12 @@ describe GameOfLife do
       expect(game.board).to eq [%w[. . .]]
     end
   end
+
+  describe 'kills a pair of cells alives' do
+    it 'both will die' do
+      game = GameOfLife.new [%w[* * .]]
+      game.next
+      expect(game.board).to eq [%w[. . .]]
+    end
+  end
 end

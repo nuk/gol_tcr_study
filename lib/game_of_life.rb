@@ -7,6 +7,16 @@ class GameOfLife
   end
 
   def next
-    @board = @board.map { |row| row.map { |cell| '.'  }  }
+    @board = @board.map.with_index do |row, y|
+      row.map.with_index { |cell, x| next_cell x, y }
+    end
   end
+
+  def next_cell x, y
+    if board[y][x - 1] == '*' && board[y][x + 1] == '*'
+      '*'
+    else
+      '.'
+    end
+  end  
 end

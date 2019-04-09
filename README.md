@@ -9,6 +9,6 @@ with some contextual description/message before __push__ into the __remote branc
 1. git rebase -i <last commit without 'TCR step'>
 2. `pick` the first one and `stash` the others
 3. Save :D
-4. Remove the 'TCR step' comments and add a contextual one
+4. Remove the 'TCR step' descriptions and add a contextual one
 5. Save :D
 6. Push!
